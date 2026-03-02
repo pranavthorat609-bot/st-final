@@ -1,0 +1,138 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Base Styles (Mobile First) ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  line-height: 1.5;
+
+  /* 🔥 Center content vertically & horizontally */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered container */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #1f2937;
+  color: white;
+}
+
+.btn.secondary {
+  background: #6b7280;
+}
+
+.btn.danger {
+  background: #dc2626;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== Inputs & Select ===== */
+label {
+  font-weight: 600;
+  margin-top: 12px;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+/* ===== Card (Bus cards, panels) ===== */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 50px;
+  margin:auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Clickable bus card */
+.bus-card {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Status Text ===== */
+.status {
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== Map ===== */
+#map {
+  height: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+/* ===== Links ===== */
+a.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ===== Desktop Enhancements ===== */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}

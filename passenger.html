@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger Panel - MSRTC Bus Tracking</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .bus-card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        #map {
+            height: 400px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Passenger Panel</h1>
+
+    <div id="busList">
+        <h3>Active Buses (Click one)</h3>
+    </div>
+
+    <div id="map"></div>
+
+    <br>
+    <a href="index.html">⬅ Back to Home</a>
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Shared Firebase config -->
+    <script src="js/firebase.js"></script>
+
+    <!-- Passenger logic -->
+    <script src="js/passenger.js"></script>
+
+</body>
+</html>

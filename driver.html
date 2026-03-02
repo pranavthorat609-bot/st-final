@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Driver Panel - MSRTC Bus Tracking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            padding: 6px;
+            width: 250px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+        }
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Driver Panel</h1>
+
+    <label>Bus Number</label><br>
+    <input type="text" id="busNo" placeholder="MH12AB1234"><br><br>
+
+    <label>Route</label><br>
+    <select id="route">
+        <option value="">Select Route</option>
+        <option value="Pune - Mumbai">Pune - Mumbai</option>
+        <option value="Pune - Nashik">Pune - Nashik</option>
+        <option value="Kolhapur - Pune">Kolhapur - Pune</option>
+    </select><br><br>
+
+    <button id="startTracking">Start Tracking</button>
+    <button id="stopTracking" style="display:none;">Stop Tracking</button>
+
+    <div id="status"></div>
+
+    <br><br>
+    <a href="index.html">⬅ Back to Home</a>
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Shared Firebase config -->
+    <script src="js/firebase.js"></script>
+
+    <!-- Driver logic -->
+    <script src="js/driver.js"></script>
+
+</body>
+</html>
