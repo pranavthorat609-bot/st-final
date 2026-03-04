@@ -1,138 +1,176 @@
-/* ===== Global Reset ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ===== COMMON STYLES (All pages) ===== */
 
-/* ===== Base Styles (Mobile First) ===== */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background: #f3f4f6;
-  color: #111827;
-  line-height: 1.5;
-
-  /* 🔥 Center content vertically & horizontally */
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e2d3;
 }
 
-/* Centered container */
 .container {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
-/* Headings */
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-/* ===== Buttons ===== */
 .btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background: #1f2937;
-  color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
 }
 
-.btn.secondary {
-  background: #6b7280;
+
+/* ===== HOME PAGE STYLES ===== */
+
+.home-container {
+    
+    text-align: center;
+
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.btn.danger {
-  background: #dc2626;
+.home-icon {
+    font-size: 60px;
+    color: #c21b1b;
+    margin-bottom: 10px;
 }
 
-.btn:active {
-  transform: scale(0.98);
+.home-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-/* ===== Inputs & Select ===== */
-label {
-  font-weight: 600;
-  margin-top: 12px;
-  display: block;
+.home-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-input,
-select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 15px;
+.btn-driver {
+    background-color: #c21b1b;
+    color: white;
+    margin-bottom: 15px;
 }
 
-/* ===== Card (Bus cards, panels) ===== */
-.card {
-  background: white;
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 50px;
-  margin:auto;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+.btn-passenger {
+    background-color: #e6e6e6;
+    color: black;
+    border: 1px solid #d0d0d0;
+}
+/* ===== DRIVER PAGE ===== */
+
+
+    .driver-page {
+    background: linear-gradient(#df6d10, #8f1414);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+/* Back button container */
+
+.back-form {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
 }
 
-/* Clickable bus card */
-.bus-card {
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+/* Back button */
+
+.back-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #d1d41b;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.bus-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+/* Driver card */
+
+.driver-card {
+    background: #f2f2f2;
+    width: 90%;
+    max-width: 350px;
+    margin: 120px auto 0 auto;
+    padding: 25px;
+    border-radius: 15px;
 }
 
-/* ===== Status Text ===== */
-.status {
-  margin-top: 12px;
-  font-weight: 600;
-  text-align: center;
+/* Title */
+
+.driver-title {
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-/* ===== Map ===== */
-#map {
-  height: 360px;
-  border-radius: 14px;
-  overflow: hidden;
-  margin-top: 15px;
+/* Input fields */
+
+.driver-card input,
+.driver-card select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
-/* ===== Links ===== */
-a.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
+/* Status row */
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
-/* ===== Desktop Enhancements ===== */
-@media (min-width: 768px) {
-  .container {
-    max-width: 700px;
-  }
+/* Status dot */
 
-  h1 {
-    font-size: 26px;
-  }
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-offline {
+    background: red;
+}
+
+.status-online {
+    background: green;
+}
+
+/* Buttons */
+
+#startTracking {
+    background: #1f7a3f;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+   
+    font-size: 20px;
+}
+
+#stopTracking {
+    background: #b4a4a4;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+   
+    font-size: 20px;
+}
 }
