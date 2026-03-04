@@ -1,1 +1,176 @@
+/* ===== COMMON STYLES (All pages) ===== */
 
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e2d3;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ===== HOME PAGE STYLES ===== */
+
+.home-container {
+    
+    text-align: center;
+
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-icon {
+    font-size: 60px;
+    color: #c21b1b;
+    margin-bottom: 10px;
+}
+
+.home-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.home-subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn-driver {
+    background-color: #c21b1b;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.btn-passenger {
+    background-color: #e6e6e6;
+    color: black;
+    border: 1px solid #d0d0d0;
+}
+/* ===== DRIVER PAGE ===== */
+
+
+    .driver-page {
+    background: linear-gradient(#df6d10, #8f1414);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+/* Back button container */
+
+.back-form {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Back button */
+
+.back-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #d1d41b;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Driver card */
+
+.driver-card {
+    background: #f2f2f2;
+    width: 90%;
+    max-width: 350px;
+    margin: 120px auto 0 auto;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* Title */
+
+.driver-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+
+.driver-card input,
+.driver-card select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Status row */
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Status dot */
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-offline {
+    background: red;
+}
+
+.status-online {
+    background: green;
+}
+
+/* Buttons */
+
+#startTracking {
+    background: #1f7a3f;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+   
+    font-size: 20px;
+}
+
+#stopTracking {
+    background: #b4a4a4;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+   
+    font-size: 20px;
+}
+}
