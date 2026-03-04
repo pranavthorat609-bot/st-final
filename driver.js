@@ -2,7 +2,8 @@
 
 let watchId = null;
 let currentBusRef = null;
-
+const statusDot = document.getElementById("statusDot");
+const statusText = document.getElementById("statusText");
 document.getElementById("startTracking").addEventListener("click", () => {
 
     const busNo = document.getElementById("busNo").value;
@@ -17,7 +18,10 @@ document.getElementById("startTracking").addEventListener("click", () => {
         alert("Geolocation not supported");
         return;
     }
+  statusDot.classList.remove("status-online");
+    statusDot.classList.add("status-offline");
 
+    statusText.innerText = "Offline";
     // Create unique bus entry (multiple buses supported)
     currentBusRef = database.ref("buses").push();
 
@@ -52,6 +56,10 @@ document.getElementById("startTracking").addEventListener("click", () => {
 });
 
 document.getElementById("stopTracking").addEventListener("click", () => {
+ statusDot.classList.remove("status-online");
+statusDot.classList.add("status-offline");
+
+statusText.innerText = "Offline";
 
     if (watchId !== null) {
         navigator.geolocation.clearWatch(watchId);
@@ -66,4 +74,5 @@ document.getElementById("stopTracking").addEventListener("click", () => {
 
     document.getElementById("startTracking").style.display = "inline";
     document.getElementById("stopTracking").style.display = "none";
+
 });
