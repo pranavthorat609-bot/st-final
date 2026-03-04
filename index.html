@@ -9,21 +9,37 @@
 </head>
 
 <body>
+<body>
 
-    <div class="container">
-        <div class="card">
-            <h1>MSRTC Bus Tracking</h1>
+<div class="container home-container">
 
-            <a href="driver.html" class="btn">
-                👨‍✈️ Driver
-            </a>
+    <div class="home-icon">🚌</div>
 
-            <a href="passenger.html" class="btn secondary">
-                🧑‍💼 Passenger
-            </a>
-        </div>
-    </div>
+    <h1 class="home-title">MSRTC LIVE</h1>
+
+    <p class="home-subtitle">Real-Time Bus Tracking</p>
+
+   <button class="btn btn-driver" onclick="goDriver()">
+    Driver
+</button>
+
+<button class="btn btn-passenger" onclick="goPassenger()">
+    Passenger
+</button>
+
+
+</div>
+<script>
+function goDriver() {
+    window.location.href = "driver.html";
+}
+
+function goPassenger() {
+    window.location.href = "passenger.html";
+}
+</script>
 
 </body>
 
+</body>
 </html>
