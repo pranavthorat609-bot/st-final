@@ -1,60 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Passenger Panel - MSRTC Bus Tracking</title>
+<title>Passenger Panel</title>
 
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet/dist/leaflet.css"
-    />
+<link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-        .bus-card {
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-        #map {
-            height: 400px;
-            margin-top: 20px;
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
 
-    <h1>Passenger Panel</h1>
+<div class="passenger-header">
+<button onclick="window.location.href='index.html'">← Back</button>
+<h2>Active Buses</h2>
+</div>
 
-    <div id="busList">
-        <h3>Active Buses (Click one)</h3>
-    </div>
+<div id="busList" class="bus-grid"></div>
 
-    <div id="map"></div>
 
-    <br>
-    <a href="index.html">⬅ Back to Home</a>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
-    <!-- Firebase CDN -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    <!-- Shared Firebase config -->
-    <script src="firebase.js"></script>
-
-    <!-- Passenger logic -->
-    <script src="passenger.js"></script>
+<script src="firebase.js"></script>
+<script src="passenger.js"></script>
 
 </body>
-
 </html>
