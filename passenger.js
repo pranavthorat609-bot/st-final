@@ -28,6 +28,7 @@ database.ref("buses").on("value", (snapshot) => {
         busListDiv.appendChild(busDiv);
     });
 });
+
 setInterval(() => {
 
     database.ref("buses").once("value", (snapshot) => {
@@ -45,11 +46,12 @@ setInterval(() => {
                 console.log("Removing inactive bus:", busId);
 
                 database.ref("buses/" + busId).remove();
+
             }
 
         });
 
     });
 
-}, 30000);
+}, 30000); // chec
 
