@@ -94,7 +94,6 @@ body {
     background: #d1d41b;
     font-size: 20px;
     cursor: pointer;
-    text:Back;
 }
 
 /* Driver card */
@@ -174,6 +173,44 @@ body {
    
     font-size: 20px;
 }
+/* ===== PASSENGER PAGE ===== */
+
+.passenger-title {
+    margin-bottom: 20px;
+}
+
+/* Bus grid layout */
+
+
+
+/* Bus card */
+
+
+
+/* Bus number */
+
+.bus-number {
+    font-weight: bold;
+}
+
+/* Route */
+
+.bus-route {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Map header */
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Map container */
+
 
 #map {
 width:100%;
@@ -195,5 +232,3 @@ border-radius:10px;
 border:1px solid #ddd;
 cursor:pointer;
 }
-
-
