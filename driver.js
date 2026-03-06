@@ -18,10 +18,10 @@ document.getElementById("startTracking").addEventListener("click", () => {
         alert("Geolocation not supported");
         return;
     }
-  statusDot.classList.remove("status-online");
-    statusDot.classList.add("status-offline");
+ statusDot.classList.remove("status-offline");
+statusDot.classList.add("status-online");
 
-    statusText.innerText = "Offline";
+statusText.innerText = "Online";
     // Create unique bus entry (multiple buses supported)
     currentBusRef = database.ref("buses").push();
 
@@ -76,3 +76,4 @@ statusText.innerText = "Offline";
     document.getElementById("stopTracking").style.display = "none";
 
 });
+
