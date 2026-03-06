@@ -28,3 +28,28 @@ database.ref("buses").on("value", (snapshot) => {
         busListDiv.appendChild(busDiv);
     });
 });
+setInterval(() => {
+
+    database.ref("buses").once("value", (snapshot) => {
+
+        snapshot.forEach((childSnapshot) => {
+
+            const bus = childSnapshot.val();
+            const busId = childSnapshot.key;
+
+            const currentTime = Date.now();
+            const fourMinutes = 4 * 60 * 1000;
+
+            if (currentTime - bus.lastUpdated > fourMinutes) {
+
+                console.log("Removing inactive bus:", busId);
+
+                database.ref("buses/" + busId).remove();
+            }
+
+        });
+
+    });
+
+}, 30000);
+
