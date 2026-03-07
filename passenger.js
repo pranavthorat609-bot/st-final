@@ -52,10 +52,8 @@ setInterval(() => {
     });
 
 }, 30000); // chec
-if (!snapshot.exists()) {
-    busListDiv.innerHTML = "<p>No active buses</p>";
-    return;
-}
+
+
 
 
 
