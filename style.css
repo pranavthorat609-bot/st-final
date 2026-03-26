@@ -179,6 +179,19 @@ body {
     margin-bottom: 20px;
 }
 
+
+#backbutton{
+    background: linear-gradient(135deg, #ff4d4d, #cc0000);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;}
+
 /* Bus grid layout */
 
 
